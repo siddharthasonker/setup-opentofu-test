@@ -34,12 +34,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Debug ACTION_STEP_DEBUG_LOGGING
-      run: echo "ACTION_STEP_DEBUG_LOGGING is ${{ github.event.inputs.step_debug_logging }}"
+      run: echo "ACTION_STEP_DEBUG_LOGGING is $ACTION_STEP_DEBUG_LOGGING"
 
     - name: Setup OpenTofu - ${{ matrix['tofu-versions'] }}
       id: setup-opentofu
       env: 
-        ACTIONS_STEP_DEBUG: ${{ steps.setup-opentofu.outputs.step_debug_logging }}
+        ACTIONS_STEP_DEBUG: ${{ env.ACTION_STEP_DEBUG_LOGGING }}
       uses: ./
       with:
         tofu_version: ${{ matrix['tofu-versions'] }}
