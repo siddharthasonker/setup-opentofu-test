@@ -35,6 +35,8 @@ outputs:
   exitcode:
     description: 'The exit code of the call to the `tofu` binary.'
     value: '126'
+  enablestepdebug:
+    description: 'Step debug enable.'
 
 branding:
   icon: 'box'
