@@ -33,10 +33,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Step debug logging disabled
-      if: ${{ inputs.debug == false }}  # Check if disabled
-      run: |
-        echo "Step debug logging is disabled for this run."
+    - name: Debug ACTION_STEP_DEBUG_LOGGING
+      run: echo "ACTION_STEP_DEBUG_LOGGING is ${{ env.ACTION_STEP_DEBUG_LOGGING }}"
 
     - name: Setup OpenTofu - ${{ matrix['tofu-versions'] }}
       env: 
