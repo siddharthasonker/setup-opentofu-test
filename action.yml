@@ -23,7 +23,7 @@ inputs:
     required: false
   step_debug_logging:
     description: 'This increases job log verbosity during and after execution when set to `true`. Defaults to `false`'
-    default: 'false'
+    default: 'true'
     required: false
 outputs:
   stdout:
