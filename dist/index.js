@@ -277,7 +277,7 @@ async function run () {
 
     const stepDebugLogging = core.getInput('step_debug_logging');
     core.setOutput('ACTION_STEP_DEBUG_LOGGING', stepDebugLogging);
-    
+
     // Install our wrapper
     if (wrapper) {
       await installWrapper(pathToCLI);
