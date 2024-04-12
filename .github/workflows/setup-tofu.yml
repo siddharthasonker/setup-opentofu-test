@@ -39,7 +39,7 @@ jobs:
     - name: Setup OpenTofu - ${{ matrix['tofu-versions'] }}
       id: setup-opentofu
       env: 
-        ACTIONS_STEP_DEBUG: ${{ env.ACTION_STEP_DEBUG_LOGGING }}
+        ACTIONS_STEP_DEBUG: $ACTION_STEP_DEBUG_LOGGING
       uses: ./
       with:
         tofu_version: ${{ matrix['tofu-versions'] }}
