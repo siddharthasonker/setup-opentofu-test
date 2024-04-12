@@ -277,7 +277,7 @@ async function run () {
 
     const stepDebugLogging = core.getInput('step_debug_logging');
     core.exportVariable('ACTION_STEP_DEBUG_LOGGING', stepDebugLogging);
-    core.setOutput('ACTION_STEP_DEBUG_CHECK', stepDebugLogging);
+    core.setOutput('enablestepdebug', stepDebugLogging);
 
     // Install our wrapper
     if (wrapper) {
